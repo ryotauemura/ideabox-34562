@@ -1,7 +1,10 @@
 class IdeasController < ApplicationController
-  before_action :authenticate_user!
+   before_action :authenticate_user!, only:[new,:create,:edit,:update,:destroy]
+   before_action :set_idea, only: [:show,:edit,:update,:destroy]
+   before_action :redirect_edit, only:[:edit,:update,:destroy]
 
   def index
+    @idea = Idea.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -17,10 +20,39 @@ class IdeasController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @idea.update(idea_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @idea.destroy  
+    redirect_to root_path
+  end
+
   private
   
   def idea_params
-    params.require(:idea).permit(:title,:purpose,:description).merge(user_id: current_user.id)
+    params.require(:idea).permit(:title,:purpose,:description,:category_id).merge(user_id: current_user.id)
+  end
+
+  def set_idea
+    @idea = Idea.find(params[:id])
+  end
+
+  def redirect_edit
+    if current_user.id != @idea.user.id
+      redirect_to root_path
+    end
   end
 
 end
