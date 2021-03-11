@@ -1,6 +1,6 @@
 class Idea < ApplicationRecord
   belongs_to :user
-  #has_many_to :comment
+  has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
