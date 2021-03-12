@@ -24,6 +24,8 @@
       <%= @idea.user.nickname %>
     </p>
   </div>
+
+  <%= render 'likes/like', idea: @idea %>
   
   <% if user_signed_in? %>
     <% unless current_user.id != @idea.user_id %>
@@ -51,7 +53,7 @@
     <% @comments.each do |comment| %>
     <li class="comments_list">
       <%= comment.text %>
-    <strong><%= link_to comment.user.name, user_path(@idea.user), class: :comment_user %><strong>
+    <strong><%= link_to comment.user.nickname, idea_path(@idea.user), class: :comment_user %><strong>
     </li>
     <% end %>
   </div>

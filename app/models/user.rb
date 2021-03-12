@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
      has_many :ideas
      has_many :comments
+     has_many :likes, dependent: :destroy
+     has_many :like_ideas, through: :likes, source: :idea
 
   with_options presence: true do
     validates :nickname,:last_name,:first_name,:last_name_kana,:first_name_kana,:birthday

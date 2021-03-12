@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
   
+  post   '/like/:idea_id' => 'likes#like',   as: 'like'
+  delete '/like/:idea_id' => 'likes#unlike', as: 'unlike'
+
 end
