@@ -7,6 +7,10 @@ class Idea < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
 
+  def self.search(search)
+    search ? where('title LIKE ?', "%#{search}%") : all
+  end
+
   with_options presence: true do
     validates :title,:purpose,:description
   end

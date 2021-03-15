@@ -4,7 +4,8 @@ class IdeasController < ApplicationController
    before_action :redirect_edit, only:[:edit,:update,:destroy]
 
   def index
-    @idea = Idea.includes(:user).order("created_at DESC")
+    @idea = Idea.includes(:user).order("created_at DESC").search(params[:search])
+    
   end
 
   def new

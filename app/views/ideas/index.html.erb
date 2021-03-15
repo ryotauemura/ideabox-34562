@@ -1,5 +1,11 @@
 <h1>IDEABOX</h1>
 
+<h2>検索</h2>
+<%= form_tag(root_path, method: :get) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
  <div class='idea-contents'>
    <h2 class='title'>アイディア一覧</h2>
    <ul class='idea-lists'>
