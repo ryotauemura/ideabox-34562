@@ -4,8 +4,18 @@ class IdeasController < ApplicationController
    before_action :redirect_edit, only:[:edit,:update,:destroy]
 
   def index
-    @idea = Idea.includes(:user).order("created_at DESC").search(params[:search])
-    
+    @idea2 = Idea.where({category_id: 2}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea3 = Idea.where({category_id: 3}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea4 = Idea.where({category_id: 4}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea5 = Idea.where({category_id: 5}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea6 = Idea.where({category_id: 6}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea7 = Idea.where({category_id: 7}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea8 = Idea.where({category_id: 8}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea9 = Idea.where({category_id: 9}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea10 = Idea.where({category_id: 10}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea11 = Idea.where({category_id: 11}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea12 = Idea.where({category_id: 12}).includes(:user).order("created_at DESC").search(params[:search])
+    @idea13 = Idea.where({category_id: 13}).includes(:user).order("created_at DESC").search(params[:search])
   end
 
   def new
