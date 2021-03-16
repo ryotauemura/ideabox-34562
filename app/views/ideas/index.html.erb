@@ -6,13 +6,8 @@
   <%= submit_tag 'Search', name: nil %>
 <% end %>
 
- <div class='idea-contents'>
+<div class='idea-contents'>
    <h2 class='title'>アイディア一覧</h2>
-   <ul class='idea-lists'>
-     <div class="card__wrapper">
-       <%#= render partial: 'idea', collection: @idea %>
-     </div>
- </div>
   
   <div class="category bg-success">経済</div>
   <% @idea2.each do |idea| %>
@@ -29,48 +24,48 @@
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">国際</div>
+  <div class="category bg-success">国際</div>
   <% @idea5.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">IT</div>
+  <div class="category bg-success">IT</div>
   <% @idea6.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">エンタメ</div>
+  <div class="category bg-success">エンタメ</div>  
   <% @idea7.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">スポーツ</div>
+  <div class="category bg-success">スポーツ</div>
   <% @idea8.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">グルメ</div>
+  <div class="category bg-success">グルメ</div>
   <% @idea9.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">家庭</div>
+  <div class="category bg-success">家庭</div>
   <% @idea10.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">仕事</div>
+  <div class="category bg-success">仕事</div>  
   <% @idea11.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">学業</div>
+  <div class="category bg-success">学業</div>
   <% @idea12.each do |idea| %>
   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
   <% end %>
 
-<div class="category bg-success">その他</div>
-  <% @idea13.each do |idea| %>
-  <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
-  <% end %>
-
+  <div class="category bg-success">その他</div>
+   <% @idea13.each do |idea| %>
+   <%= link_to idea.title, idea_path(idea.id), class: :card__title%>
+   <% end %>
+</div>
