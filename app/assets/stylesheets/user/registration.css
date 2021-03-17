@@ -1,0 +1,30 @@
+.simple_title {
+  padding: 50px 0 40px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.member_content {
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 50px;
+}
+
+.member_content_title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.field {
+  border-top: 1px solid #ccc;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 35px 40px 40px;
+}
+
+.actions {
+  border-top: 1px solid #ccc;
+  margin-top: 2em;
+  padding: 6em 0;
+}
