@@ -1,32 +1,30 @@
-<div class="idea-show">
-  <div class="idea-box">
-    <h2 class="title">
-      <%= @idea.title %>
-    </h2>
-  </div>
-  
-  <div class="idea__body">
-    <div class="idea__detail">
-      <p class="detail__purpose">アイディアの目的</p>
-      <p class="detail__message">
-        <%= @idea.purpose %>
-      </p>
-    </div>
-  </div>
+<h2 class="show-title">
+  <%= @idea.title %>
+</h2>
 
-  <div class="idea-explain-box">
-    <span><%= @idea.description %></span>
-  </div>
-
-  <div class="idea__detail">
-    <p class="detail__nickname">投稿者</p>
-    <p class="detail__message">
-      <%= @idea.user.nickname %>
+<div class="member_content">  
+  <div class="field">
+    <p class="show_subtitle">目的</p>
+    <p class="show_message">
+      <%= @idea.purpose %>
     </p>
   </div>
 
-  <%= render 'likes/like', idea: @idea %>
-  
+  <div class="field">
+    <p class="show_subtitle">説明</p>
+    <p class="show_message">
+      <%= @idea.description %>
+    </p>
+  </div>
+
+  <div class="field">
+    <p class="show_subtitle">投稿者</p>
+    <p class="show_message">
+      <%= @idea.user.nickname %>
+    </p>
+    <%= render 'likes/like', idea: @idea %>
+  </div>
+ 
   <% if user_signed_in? %>
     <% unless current_user.id != @idea.user_id %>
       <%= link_to "アイディアの編集", edit_idea_path(@idea.id), method: :get, class: "idea-red-btn" %>

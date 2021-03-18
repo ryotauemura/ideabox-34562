@@ -1,0 +1,21 @@
+.ideapost {
+  text-align: center;
+}
+
+.weight-bold-text {
+  font-size: 20px;
+}
+
+.ideas-text {
+  width: 80%;
+  height: 28px;
+  font-size: 16px;
+  resize: none;
+}
+
+.ideas-description {
+  width: 100%;
+  height: 300px;
+  font-size: 16px;
+  resize: none;
+}
