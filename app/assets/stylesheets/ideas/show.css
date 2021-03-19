@@ -1,9 +1,36 @@
 .show-title {
-  padding: 30px 0 10px;
+  padding: 30px 0 20px;
   text-align: center;
   font-size: 25px;
 }
 
 .show_subtitle {
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.show_message {
+  font-size: 19px;
+}
+
+.edit_delete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.idea-red-btn {
+  padding: 10px 10px;
+}
+
+.idea-destroy {
+  padding: 10px 10px;
+}
+
+.comment-text {
+  width: 50%;
+  height: 22px;
+  font-size: 15px;
+}
+
+.comments_list{
+  list-style: none;
 }
