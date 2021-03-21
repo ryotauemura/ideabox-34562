@@ -2,13 +2,16 @@
   <h1>Ideabox</h1>
 </header>
 
-<h2 class="ideapost">アイディア投稿</h2>
+<h2 class="idea-post">アイディア投稿</h2>
     
+
 <main>
   <div class="member_content">
-    <%= form_with model: @idea, local: true do |f| %>        
+    <%= form_with model: @idea, local: true do |f| %>     
 
-        <%# タイトルとアイディアの目的 %>
+     <%= render 'devise/shared/error_messages2', model: f.object %>   
+
+        <%# タイトルと目的 %>
         <div class="field">  
           <div class="weight-bold-text">
                  タイトル
