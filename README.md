@@ -1,4 +1,4 @@
-IdeaBox
+#IdeaBox
 
 概要
 
@@ -94,8 +94,11 @@ Basic認証
 | birthday           | date       | null: false               |
 
 has_many :idea
+
 has_many :comments
+
 has_many :likes, dependent: :destroy
+
 has_many :like_ideas, through: :likes, source: :idea
 
 ・ideas テーブル
@@ -110,8 +113,11 @@ has_many :like_ideas, through: :likes, source: :idea
 |                     |             |                   |
 
 belongs_to :user
+
 has_many   :comment
+
 has_many :likes, dependent: :destroy
+
 has_many :liking_users, through: :likes, source: :user
 
 ・comments テーブル
@@ -124,6 +130,7 @@ has_many :liking_users, through: :likes, source: :user
 |                     |             |                   |
 
 belongs_to :user
+
 belongs_to :idea
 
 ・likes テーブル
@@ -135,4 +142,5 @@ belongs_to :idea
 |                     |             |                   |
 
 belongs_to :idea, counter_cache: :likes_count
+
 belongs_to :user
