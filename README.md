@@ -9,10 +9,12 @@ URL  https://ideabox-34562.herokuapp.com/
 
 Basic認証     
   ID    final
+
   Pass  7777
 
 テスト用アカウント  
   メールアドレス  test@test.com
+
   パスワード     test00
 
 利用方法
@@ -51,19 +53,29 @@ Basic認証
 ローカルでの動作方法
 
 % git clone https://github.com/ryotauemura/ideabox-34562
+
 % cd ideabox-34562
+
 % bundle install
+
 % rails db:create
+
 % rails db:migrate
+
 % rails s
+
  ⇨ http://localhost:3000
 
  開発環境
 
 ・VScode
+
 ・RUby 2.6.5
+
 ・Rails 6.0.0
+
 ・mysql2 0.4.4
+
 ・javaScript 
 
 データベース設計
