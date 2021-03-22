@@ -5,7 +5,7 @@
 ふと思いついたアイディアを投稿し閲覧できるアプリケーションです。仕事や生活で役立つアイディアを考えた時に
 、それをみてもらうことでより良いアイディアにできたり、企画の参考になるアイディアを見つけることができる
 
-## URL  https://ideabox-34562.herokuapp.com/
+ URL  https://ideabox-34562.herokuapp.com/
 
 ## Basic認証     
   ID    final
