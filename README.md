@@ -1,6 +1,6 @@
 # IdeaBox
 
-![top](https://gyazo.com/3817e1540354d09103b001ef11621693"top")
+https://gyazo.com/3817e1540354d09103b001ef11621693
 
 ## 概要
 
