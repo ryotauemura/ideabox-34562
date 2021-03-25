@@ -1,6 +1,6 @@
 # IdeaBox
 
-[![Image from Gyazo](https://i.gyazo.com/3817e1540354d09103b001ef11621693.jpg)](https://gyazo.com/3817e1540354d09103b001ef11621693)
+[![Image from Gyazo](https://i.gyazo.com/453b04a2a46aa8660b423a18e724f28a.png)](https://gyazo.com/453b04a2a46aa8660b423a18e724f28a)
 
 ## 概要
 
